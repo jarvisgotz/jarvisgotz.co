@@ -4,9 +4,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Inquire — Studio Mural" },
+      { title: "Inquire — jarvisgötz.co" },
       { name: "description", content: "Commission a bespoke mural for your space. Tell us about your project." },
-      { property: "og:title", content: "Inquire — Studio Mural" },
+      { property: "og:title", content: "Inquire — jarvisgötz.co" },
       { property: "og:description", content: "Commission a bespoke mural for your space." },
     ],
   }),
