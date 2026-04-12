@@ -10,9 +10,9 @@ import mural6 from "@/assets/mural-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Studio Mural — Bespoke Large-Scale Murals" },
+      { title: "jarvisgötz.co — Bespoke Large-Scale Murals" },
       { name: "description", content: "Commissioned large-scale murals for luxury residences, hotels, and commercial spaces. View our portfolio." },
-      { property: "og:title", content: "Studio Mural — Bespoke Large-Scale Murals" },
+      { property: "og:title", content: "jarvisgötz.co — Bespoke Large-Scale Murals" },
       { property: "og:description", content: "Commissioned large-scale murals for luxury residences, hotels, and commercial spaces." },
     ],
   }),
