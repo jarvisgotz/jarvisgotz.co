@@ -44,13 +44,13 @@ function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pb-16 md:pb-24">
-          <p className="label-uppercase mb-4 text-accent">Bespoke Murals</p>
+          <p className="label-uppercase mb-4 text-accent">bespoke murals</p>
           <h1 className="heading-display max-w-3xl text-foreground">
-            Art that transforms<br />architecture
+            art that transforms<br />architecture
           </h1>
           <div className="mt-8 flex gap-4">
             <Link to="/contact" className="btn-luxury">
-              Commission a piece
+              commission a piece
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-6 mb-16">
             <div className="divider-gold" />
-            <p className="label-uppercase">Selected Works</p>
+            <p className="label-uppercase">selected works</p>
           </div>
 
           <div className="columns-1 md:columns-2 gap-4 md:gap-6 space-y-4 md:space-y-6">
@@ -93,15 +93,15 @@ function HomePage() {
       <section className="py-20 md:py-32 px-6 md:px-12 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="heading-section text-foreground">
-            Every space deserves a masterpiece
+            every space deserves a masterpiece
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl mx-auto">
-            We work with architects, interior designers, and private collectors to create
+            i work with architects, interior designers, and private collectors to create
             one-of-a-kind murals tailored to your vision and space.
           </p>
           <div className="mt-10">
             <Link to="/contact" className="btn-luxury-outline">
-              Start a conversation
+              start a conversation
             </Link>
           </div>
         </div>
