@@ -21,6 +21,13 @@ export function Header() {
             Gallery
           </Link>
           <Link
+            to="/about"
+            className="label-uppercase text-foreground/60 hover:text-foreground transition-colors duration-300"
+            activeProps={{ className: "label-uppercase text-accent" }}
+          >
+            About
+          </Link>
+          <Link
             to="/contact"
             className="label-uppercase text-foreground/60 hover:text-foreground transition-colors duration-300"
             activeProps={{ className: "label-uppercase text-accent" }}
@@ -49,6 +56,13 @@ export function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Gallery
+          </Link>
+          <Link
+            to="/about"
+            className="label-uppercase text-foreground/60 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
           </Link>
           <Link
             to="/contact"
