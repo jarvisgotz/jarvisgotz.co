@@ -26,30 +26,30 @@ function ContactPage() {
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center gap-6 mb-8">
           <div className="divider-gold" />
-          <p className="label-uppercase">Get in touch</p>
+          <p className="label-uppercase lowercase" style={{ fontVariant: "small-caps" }}>get in touch</p>
         </div>
 
-        <h1 className="heading-section text-foreground mb-4">
-          Tell us about your project
+        <h1 className="heading-section text-foreground mb-4 lowercase" style={{ fontVariant: "small-caps" }}>
+          tell me about your project
         </h1>
-        <p className="text-muted-foreground leading-relaxed mb-12">
-          Whether you have a clear vision or need guidance, we'd love to hear from you.
-          Share some details and we'll respond within 48 hours.
+        <p className="text-muted-foreground leading-relaxed mb-12 lowercase" style={{ fontVariant: "small-caps" }}>
+          whether you have a clear vision or need guidance, i'd love to hear from you.
+          share some details and i'll respond within 48 hours.
         </p>
 
         {submitted ? (
           <div className="py-16 text-center">
             <div className="divider-gold mx-auto mb-8" />
-            <h2 className="font-serif text-2xl text-foreground mb-4">Thank you</h2>
-            <p className="text-muted-foreground">
-              We've received your inquiry and will be in touch soon.
+            <h2 className="font-serif text-2xl text-foreground mb-4 lowercase" style={{ fontVariant: "small-caps" }}>thank you</h2>
+            <p className="text-muted-foreground lowercase" style={{ fontVariant: "small-caps" }}>
+              i've received your inquiry and will be in touch soon.
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="label-uppercase block mb-2">Name</label>
+                <label className="label-uppercase block mb-2 lowercase" style={{ fontVariant: "small-caps" }}>name</label>
                 <input
                   type="text"
                   name="name"
@@ -59,7 +59,7 @@ function ContactPage() {
                 />
               </div>
               <div>
-                <label className="label-uppercase block mb-2">Email</label>
+                <label className="label-uppercase block mb-2 lowercase" style={{ fontVariant: "small-caps" }}>email</label>
                 <input
                   type="email"
                   name="email"
@@ -71,7 +71,7 @@ function ContactPage() {
             </div>
 
             <div>
-              <label className="label-uppercase block mb-2">Project type</label>
+              <label className="label-uppercase block mb-2 lowercase" style={{ fontVariant: "small-caps" }}>project type</label>
               <select
                 name="projectType"
                 required
@@ -88,7 +88,7 @@ function ContactPage() {
             </div>
 
             <div>
-              <label className="label-uppercase block mb-2">Tell us more</label>
+              <label className="label-uppercase block mb-2 lowercase" style={{ fontVariant: "small-caps" }}>tell me more</label>
               <textarea
                 name="message"
                 rows={5}
@@ -99,8 +99,8 @@ function ContactPage() {
             </div>
 
             <div className="pt-4">
-              <button type="submit" className="btn-luxury w-full md:w-auto">
-                Send inquiry
+              <button type="submit" className="btn-luxury w-full md:w-auto lowercase" style={{ fontVariant: "small-caps" }}>
+                send inquiry
               </button>
             </div>
           </form>
