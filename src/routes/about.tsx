@@ -22,7 +22,7 @@ function AboutPage() {
         </div>
 
         <h1 className="heading-section text-foreground mb-6">
-          About Ollie
+          about me
         </h1>
 
         <div className="space-y-6 text-muted-foreground leading-relaxed">
