@@ -6,7 +6,7 @@ export function Footer() {
           © {new Date().getFullYear()} jarvisgötz.co
         </p>
         <p className="label-uppercase text-foreground/30">
-          Bespoke murals for discerning spaces
+          Bespoke murals for refined spaces
         </p>
       </div>
     </footer>
