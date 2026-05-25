@@ -1,11 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-mural.jpg";
-import mural1 from "@/assets/mural-1.jpg";
-import mural2 from "@/assets/mural-2.jpg";
-import mural3 from "@/assets/mural-3.jpg";
-import mural4 from "@/assets/mural-4.jpg";
-import mural5 from "@/assets/mural-5.jpg";
-import mural6 from "@/assets/mural-6.jpg";
+import { galleryItems } from "@/lib/gallery";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,15 +13,6 @@ export const Route = createFileRoute("/")({
   }),
   component: HomePage,
 });
-
-const galleryItems = [
-  { src: mural1, title: "Obsidian & Gold", location: "Private Residence, NYC", aspect: "tall" },
-  { src: mural2, title: "Terracotta Flow", location: "Gallery Installation, LA", aspect: "wide" },
-  { src: mural3, title: "Geometric Dusk", location: "Estate Exterior, Miami", aspect: "tall" },
-  { src: mural4, title: "Burgundy Burst", location: "Hotel Lobby, Dubai", aspect: "wide" },
-  { src: mural5, title: "Midnight Garden", location: "Restaurant, London", aspect: "tall" },
-  { src: mural6, title: "Copper Storm", location: "Penthouse Loft, Chicago", aspect: "wide" },
-];
 
 function HomePage() {
   return (
@@ -65,10 +51,13 @@ function HomePage() {
           </div>
 
           <div className="columns-1 md:columns-2 gap-4 md:gap-6 space-y-4 md:space-y-6">
-            {galleryItems.map((item, i) => (
-              <div
-                key={i}
-                className="gallery-item break-inside-avoid"
+            {galleryItems.map((item) => (
+              <Link
+                key={item.slug}
+                to="/works/$slug"
+                params={{ slug: item.slug }}
+                className="gallery-item break-inside-avoid block cursor-pointer"
+                aria-label={`view ${item.title} — ${item.location}`}
               >
                 <img
                   src={item.src}
@@ -83,7 +72,7 @@ function HomePage() {
                   <p className="font-serif text-lg text-foreground">{item.title}</p>
                   <p className="label-uppercase mt-1 text-foreground/50">{item.location}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
