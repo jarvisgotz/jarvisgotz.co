@@ -35,7 +35,7 @@ export const Route = createFileRoute("/works/$slug")({
 });
 
 function WorkPage() {
-  const item = Route.useLoaderData();
+  const item = Route.useLoaderData()!;
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
