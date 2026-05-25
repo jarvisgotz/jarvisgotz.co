@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getGalleryItem, galleryItems } from "@/lib/gallery";
+import { getGalleryItem, galleryItems, type GalleryItem } from "@/lib/gallery";
 
 export const Route = createFileRoute("/works/$slug")({
   head: ({ params }) => {
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/works/$slug")({
 });
 
 function WorkPage() {
-  const item = Route.useLoaderData()!;
+  const item = Route.useLoaderData() as GalleryItem;
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
