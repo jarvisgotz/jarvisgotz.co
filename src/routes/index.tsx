@@ -18,7 +18,7 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-screen flex items-end">
+      <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -27,18 +27,18 @@ function HomePage() {
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pb-16 md:pb-24">
-          <p className="label-uppercase mb-4 text-accent">bespoke murals</p>
-          <h1 className="heading-display max-w-3xl text-foreground">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 text-center text-white">
+          <p className="label-uppercase mb-4 text-white/80">bespoke murals</p>
+          <h1 className="heading-display max-w-3xl mx-auto text-white">
             art that transforms<br />architecture
           </h1>
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex justify-center gap-4">
             <Link to="/contact" className="btn-luxury">
               commission a piece
             </Link>
           </div>
+
         </div>
       </section>
 
