@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImage from "@/assets/hero-mural.jpg";
+import heroAsset from "@/assets/hero-mural.jpg.asset.json";
 import { galleryItems } from "@/lib/gallery";
 
 export const Route = createFileRoute("/")({
@@ -21,7 +21,7 @@ function HomePage() {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src={heroAsset.url}
             alt="Artist painting a large-scale mural in a dramatic studio"
             className="w-full h-full object-cover"
             width={1920}
