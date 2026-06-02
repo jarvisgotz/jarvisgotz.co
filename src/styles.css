@@ -209,9 +209,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.875rem 2.5rem;
+    padding: 1.125rem 3rem;
     font-family: var(--font-sans);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 400;
