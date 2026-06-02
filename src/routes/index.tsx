@@ -30,7 +30,7 @@ function HomePage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 text-center text-white">
           <p className="label-uppercase mb-4 text-white/80">bespoke murals</p>
-          <h1 className="heading-display max-w-4xl mx-auto text-white/90 font-bold text-6xl md:text-8xl lg:text-9xl leading-[1.05]">
+          <h1 className="heading-display max-w-4xl mx-auto text-white/75 font-bold text-6xl md:text-8xl lg:text-9xl leading-[1.05] tracking-[0.2em]">
             art that transforms<br />architecture
           </h1>
           <div className="mt-8 flex justify-center gap-4">
