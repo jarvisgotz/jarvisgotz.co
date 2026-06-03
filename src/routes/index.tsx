@@ -34,7 +34,7 @@ function HomePage() {
             art that transforms<br />architecture
           </h1>
           <div className="mt-8 flex justify-center gap-4">
-            <Link to="/contact" className="btn-luxury bg-white text-black hover:bg-white/90 hover:text-black">
+            <Link to="/contact" className="btn-luxury !bg-white !text-black hover:!bg-white/90 hover:!text-black !py-5 !px-10 !text-sm">
               commission a piece
             </Link>
           </div>
