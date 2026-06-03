@@ -47,7 +47,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-6 mb-16">
             <div className="divider-gold" />
-            <p className="label-uppercase">selected works</p>
+            <p className="label-uppercase text-3xl">selected works</p>
           </div>
 
           <div className="columns-1 md:columns-2 gap-4 md:gap-6 space-y-4 md:space-y-6">
