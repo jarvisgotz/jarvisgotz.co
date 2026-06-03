@@ -10,6 +10,5 @@ import { nitro } from "nitro/vite";
 const isVercel = process.env.VERCEL === "1";
 
 export default defineConfig({
-  cloudflare: isVercel ? false : undefined,
   plugins: isVercel ? [nitro({ preset: "vercel" })] : [],
 });
