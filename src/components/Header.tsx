@@ -8,10 +8,10 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Desktop masthead */}
-        <div className="hidden md:flex flex-col items-center pt-8 pb-6 gap-5">
+        <div className="hidden md:flex flex-col items-center pt-8 pb-10 gap-6">
           <Link
             to="/"
-            className="font-serif text-2xl lg:text-3xl tracking-tight text-foreground"
+            className="font-serif text-3xl lg:text-4xl tracking-tight text-foreground"
           >
             jarvisgötz.co
           </Link>
@@ -50,7 +50,7 @@ export function Header() {
             <span className={`block w-5 h-px bg-foreground transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1' : ''}`} />
             <span className={`block w-5 h-px bg-foreground transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-0.5' : ''}`} />
           </button>
-          <Link to="/" className="font-serif text-lg tracking-tight text-foreground">
+          <Link to="/" className="font-serif text-xl tracking-tight text-foreground">
             jarvisgötz.co
           </Link>
         </div>
