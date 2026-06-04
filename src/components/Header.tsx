@@ -18,22 +18,22 @@ export function Header() {
           <nav className="flex items-center gap-12">
             <Link
               to="/"
-              className="label-uppercase text-foreground/60 hover:text-foreground transition-colors duration-300"
-              activeProps={{ className: "label-uppercase text-accent" }}
+              className="label-uppercase text-sm text-foreground/60 hover:text-foreground transition-colors duration-300"
+              activeProps={{ className: "label-uppercase text-sm text-accent" }}
             >
               Gallery
             </Link>
             <Link
               to="/about"
-              className="label-uppercase text-foreground/60 hover:text-foreground transition-colors duration-300"
-              activeProps={{ className: "label-uppercase text-accent" }}
+              className="label-uppercase text-sm text-foreground/60 hover:text-foreground transition-colors duration-300"
+              activeProps={{ className: "label-uppercase text-sm text-accent" }}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="label-uppercase text-foreground/60 hover:text-foreground transition-colors duration-300"
-              activeProps={{ className: "label-uppercase text-accent" }}
+              className="label-uppercase text-sm text-foreground/60 hover:text-foreground transition-colors duration-300"
+              activeProps={{ className: "label-uppercase text-sm text-accent" }}
             >
               Inquire
             </Link>
