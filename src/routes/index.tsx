@@ -33,9 +33,15 @@ function HomePage() {
           <h1 className="heading-display max-w-4xl mx-auto text-white/75 font-bold text-6xl md:text-8xl lg:text-9xl leading-[1.05] tracking-[0.2em]">
             art that transforms<br />architecture
           </h1>
-          <div className="mt-8 flex justify-center gap-4">
-            <Link to="/contact" className="btn-luxury !bg-white !text-black hover:!bg-white/90 hover:!text-black !py-5 !px-10 !text-sm">
-              commission a piece
+          <div className="mt-10 flex justify-center gap-4">
+            <Link to="/contact" aria-label="commission a piece" className="funky-star-btn group">
+              <svg viewBox="0 0 240 240" className="funky-star-svg" aria-hidden="true">
+                <path
+                  d="M118 14 C128 46, 146 60, 182 52 C170 80, 178 102, 222 110 C188 124, 188 148, 214 184 C176 178, 158 196, 152 226 C134 200, 110 198, 78 222 C82 188, 66 170, 24 168 C58 148, 62 124, 30 96 C68 100, 90 86, 92 46 C100 60, 108 60, 118 14 Z"
+                  className="funky-star-path"
+                />
+              </svg>
+              <span className="funky-star-label">commission<br/>a piece</span>
             </Link>
           </div>
 
