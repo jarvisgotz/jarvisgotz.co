@@ -69,8 +69,8 @@ function HomePage() {
                 />
                 <div className="gallery-overlay" />
                 <div className="gallery-caption">
-                  <p className="font-serif text-lg text-foreground">{item.title}</p>
-                  <p className="label-uppercase mt-1 text-foreground/50">{item.location}</p>
+                  <p className="font-serif text-3xl md:text-4xl text-foreground">{item.title}</p>
+                  <p className="label-uppercase mt-2 text-foreground/50 text-lg md:text-xl">{item.location}</p>
                 </div>
               </Link>
             ))}
