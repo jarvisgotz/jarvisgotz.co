@@ -28,7 +28,7 @@ function HomePage() {
             height={1080}
           />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 text-center text-white">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pt-40 md:pt-48 text-center text-white">
           
           <h1 className="heading-display max-w-4xl mx-auto text-white/75 font-bold text-6xl md:text-8xl lg:text-9xl leading-[1.05] tracking-[0.2em]">
             art that transforms<br />architecture
