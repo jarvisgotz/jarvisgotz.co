@@ -183,85 +183,29 @@
     opacity: 1;
   }
 
-  .funky-star-btn {
-    position: relative;
+  .btn-hero-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 240px;
-    height: 240px;
-    text-decoration: none;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .funky-star-btn:hover { transform: rotate(-6deg) scale(1.04); }
-
-  .funky-star-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotate(90deg);
-    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .funky-star-btn:hover .funky-star-svg { transform: rotate(102deg); }
-
-  .funky-star-path {
-    fill: #ffffff;
-    stroke: none;
-    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
-    transition: fill 0.4s ease;
-  }
-  .funky-star-btn:hover .funky-star-path { fill: oklch(0.96 0.005 80); }
-
-  .funky-star-sparks {
-    position: absolute;
-    inset: -40px;
-    width: calc(100% + 80px);
-    height: calc(100% + 80px);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  .funky-star-sparks .spark path {
-    fill: none;
-    stroke: #0d0d0d;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-  .funky-star-btn:hover .funky-star-sparks { opacity: 1; }
-  .funky-star-btn:hover .spark { animation: spark-pop 1.2s ease-out infinite; }
-  .funky-star-btn:hover .spark-2 { animation-delay: 0.15s; }
-  .funky-star-btn:hover .spark-3 { animation-delay: 0.3s; }
-  .funky-star-btn:hover .spark-4 { animation-delay: 0.45s; }
-  .funky-star-btn:hover .spark-5 { animation-delay: 0.6s; }
-  .funky-star-btn:hover .spark-6 { animation-delay: 0.75s; }
-
-  @keyframes spark-pop {
-    0% { opacity: 0; transform: scale(0.4); }
-    40% { opacity: 1; transform: scale(1.1); }
-    100% { opacity: 0; transform: scale(1.4); }
-  }
-
-  .funky-star-label {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    font-family: var(--font-display, var(--font-sans));
-    font-weight: 700;
-    font-size: 1.05rem;
-    line-height: 1.15;
-    letter-spacing: 0.14em;
+    padding: 1.25rem 3rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
     text-transform: lowercase;
-    font-variant: normal;
-    font-feature-settings: normal;
+    font-variant: small-caps;
+    font-weight: 400;
+    background-color: #ffffff;
     color: #0d0d0d;
-    text-align: center;
-    padding: 0 1rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  .btn-hero-cta:hover {
+    background-color: oklch(0.96 0.005 80);
+    transform: scale(1.04);
   }
 
   .input-luxury {
