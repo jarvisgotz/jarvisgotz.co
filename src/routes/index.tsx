@@ -34,22 +34,8 @@ function HomePage() {
             art that transforms<br />architecture
           </h1>
           <div className="mt-10 flex justify-center gap-4">
-            <Link to="/contact" aria-label="commission a piece!" className="funky-star-btn group">
-              <svg viewBox="0 0 240 240" className="funky-star-svg" aria-hidden="true">
-                <path
-                  d="M118 14 C128 46, 146 60, 182 52 C170 80, 178 102, 222 110 C188 124, 188 148, 214 184 C176 178, 158 196, 152 226 C134 200, 110 198, 78 222 C82 188, 66 170, 24 168 C58 148, 62 124, 30 96 C68 100, 90 86, 92 46 C100 60, 108 60, 118 14 Z"
-                  className="funky-star-path"
-                />
-              </svg>
-              <svg viewBox="0 0 320 320" className="funky-star-sparks" aria-hidden="true">
-                <g className="spark spark-1"><path d="M40 60 L52 72 M46 54 L46 78 M34 66 L58 66" /></g>
-                <g className="spark spark-2"><path d="M280 50 L292 62 M286 44 L286 68 M274 56 L298 56" /></g>
-                <g className="spark spark-3"><path d="M30 230 L42 242 M36 224 L36 248 M24 236 L48 236" /></g>
-                <g className="spark spark-4"><path d="M290 250 L302 262 M296 244 L296 268 M284 256 L308 256" /></g>
-                <g className="spark spark-5"><path d="M160 8 L160 26 M151 17 L169 17" /></g>
-                <g className="spark spark-6"><path d="M160 296 L160 314 M151 305 L169 305" /></g>
-              </svg>
-              <span className="funky-star-label">commission<br/>a piece!</span>
+            <Link to="/contact" aria-label="commission a piece!" className="btn-hero-cta group">
+              commission a piece!
             </Link>
           </div>
 
