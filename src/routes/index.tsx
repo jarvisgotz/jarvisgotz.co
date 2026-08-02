@@ -49,9 +49,9 @@ function HomePage() {
       {/* Gallery */}
       <section className="py-20 md:py-32 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-6 mb-16">
+          <div className="flex flex-col items-center gap-6 mb-16">
+            <p className="label-uppercase text-3xl">gallery</p>
             <div className="divider-gold" />
-            <p className="label-uppercase text-3xl">selected works</p>
           </div>
 
           <div className="columns-1 md:columns-2 gap-4 md:gap-6 space-y-4 md:space-y-6">
