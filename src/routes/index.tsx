@@ -63,14 +63,15 @@ function HomePage() {
                 className="gallery-item break-inside-avoid block cursor-pointer"
                 aria-label={`view ${item.title} — ${item.location}`}
               >
-                <img
-                  src={item.src}
+                <Slideshow
+                  images={item.images}
                   alt={`${item.title} — ${item.location}`}
-                  className="w-full object-cover"
-                  loading="lazy"
+                  className="w-full"
+                  interval={item.aspect === "tall" ? 4500 : 5500}
                   width={1024}
                   height={item.aspect === "tall" ? 1344 : 768}
                 />
+
                 <div className="gallery-overlay" />
                 <div className="gallery-caption">
                   <p className="font-serif text-3xl md:text-4xl text-foreground">{item.title}</p>
