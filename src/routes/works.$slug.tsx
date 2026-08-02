@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getGalleryItem, galleryItems, type GalleryItem } from "@/lib/gallery";
+import { Slideshow } from "@/components/Slideshow";
+
 
 export const Route = createFileRoute("/works/$slug")({
   head: ({ params }) => {
@@ -39,11 +41,14 @@ function WorkPage() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      <img
-        src={item.src}
+      <Slideshow
+        images={item.images}
         alt={`${item.title} — ${item.location}`}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full"
+        interval={5000}
+        loading="eager"
       />
+
       <div className="absolute inset-0 bg-gradient-to-l from-black/55 via-black/10 to-transparent" />
 
       <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10">

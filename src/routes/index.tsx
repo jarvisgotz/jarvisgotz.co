@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-const heroAsset = { url: "/hero-mural.jpg" };
-import { galleryItems } from "@/lib/gallery";
+import { galleryItems, heroImages } from "@/lib/gallery";
+import { Slideshow } from "@/components/Slideshow";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,14 +21,17 @@ function HomePage() {
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          <img
-            src={heroAsset.url}
+          <Slideshow
+            images={heroImages}
             alt="Artist painting a large-scale mural in a dramatic studio"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
+            interval={5000}
+            loading="eager"
             width={1920}
             height={1080}
           />
         </div>
+
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pt-40 md:pt-48 text-center text-white">
           
           <h1 className="heading-display max-w-4xl mx-auto text-white/75 font-bold text-6xl md:text-8xl lg:text-9xl leading-[1.05] tracking-[0.2em]">
@@ -59,14 +63,15 @@ function HomePage() {
                 className="gallery-item break-inside-avoid block cursor-pointer"
                 aria-label={`view ${item.title} — ${item.location}`}
               >
-                <img
-                  src={item.src}
+                <Slideshow
+                  images={item.images}
                   alt={`${item.title} — ${item.location}`}
-                  className="w-full object-cover"
-                  loading="lazy"
+                  className="w-full"
+                  interval={item.aspect === "tall" ? 4500 : 5500}
                   width={1024}
                   height={item.aspect === "tall" ? 1344 : 768}
                 />
+
                 <div className="gallery-overlay" />
                 <div className="gallery-caption">
                   <p className="font-serif text-3xl md:text-4xl text-foreground">{item.title}</p>

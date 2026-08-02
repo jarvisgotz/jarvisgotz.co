@@ -8,16 +8,26 @@ import mural6 from "@/assets/mural-6.jpg";
 export type GalleryItem = {
   slug: string;
   src: string;
+  /** slideshow frames — first one is the cover image */
+  images: string[];
   title: string;
   location: string;
   aspect: "tall" | "wide";
   description: string;
 };
 
+export const heroImages: string[] = [
+  "/hero-mural.jpg",
+  mural1,
+  mural4,
+  mural6,
+];
+
 export const galleryItems: GalleryItem[] = [
   {
     slug: "obsidian-and-gold",
     src: mural1,
+    images: [mural1, mural3, mural5],
     title: "Obsidian & Gold",
     location: "Private Residence, NYC",
     aspect: "tall",
@@ -27,6 +37,7 @@ export const galleryItems: GalleryItem[] = [
   {
     slug: "terracotta-flow",
     src: mural2,
+    images: [mural2, mural4, mural6],
     title: "Terracotta Flow",
     location: "Gallery Installation, LA",
     aspect: "wide",
@@ -36,6 +47,7 @@ export const galleryItems: GalleryItem[] = [
   {
     slug: "geometric-dusk",
     src: mural3,
+    images: [mural3, mural1, mural5],
     title: "Geometric Dusk",
     location: "Estate Exterior, Miami",
     aspect: "tall",
@@ -45,6 +57,7 @@ export const galleryItems: GalleryItem[] = [
   {
     slug: "burgundy-burst",
     src: mural4,
+    images: [mural4, mural6, mural2],
     title: "Burgundy Burst",
     location: "Hotel Lobby, Dubai",
     aspect: "wide",
@@ -54,6 +67,7 @@ export const galleryItems: GalleryItem[] = [
   {
     slug: "midnight-garden",
     src: mural5,
+    images: [mural5, mural3, mural1],
     title: "Midnight Garden",
     location: "Restaurant, London",
     aspect: "tall",
@@ -63,6 +77,7 @@ export const galleryItems: GalleryItem[] = [
   {
     slug: "copper-storm",
     src: mural6,
+    images: [mural6, mural2, mural4],
     title: "Copper Storm",
     location: "Penthouse Loft, Chicago",
     aspect: "wide",
