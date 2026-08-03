@@ -88,6 +88,26 @@ export function Header() {
             Gallery
           </Link>
           <Link
+            to="/portraits"
+            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Portraits
+          </Link>
+          <Link
+            to="/murals"
+            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Murals
+          </Link>
+          <Link
+            to="/weddings"
+            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Weddings
+          <Link
             to="/about"
             className="label-uppercase text-foreground/60 hover:text-foreground"
             onClick={() => setMenuOpen(false)}
