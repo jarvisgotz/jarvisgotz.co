@@ -18,6 +18,7 @@ export type GalleryItem = {
 
 export const heroImages: string[] = [
   "/hero-mural.jpg",
+  "/hero-robin.jpg",
   mural1,
   mural4,
   mural6,
