@@ -17,11 +17,10 @@ export type GalleryItem = {
 };
 
 export const heroImages: string[] = [
-  "/hero-mural.jpg",
   "/hero-robin.jpg",
-  mural1,
-  mural4,
-  mural6,
+  "/hero-dog.jpg",
+  "/hero-clandestino.jpg",
+  "/hero-siblings.jpg",
 ];
 
 export const galleryItems: GalleryItem[] = [
