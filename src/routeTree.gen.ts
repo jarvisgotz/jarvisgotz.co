@@ -9,11 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WeddingsRouteImport } from './routes/weddings'
+import { Route as PortraitsRouteImport } from './routes/portraits'
+import { Route as MuralsRouteImport } from './routes/murals'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorksSlugRouteImport } from './routes/works.$slug'
 
+const WeddingsRoute = WeddingsRouteImport.update({
+  id: '/weddings',
+  path: '/weddings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortraitsRoute = PortraitsRouteImport.update({
+  id: '/portraits',
+  path: '/portraits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MuralsRoute = MuralsRouteImport.update({
+  id: '/murals',
+  path: '/murals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -39,12 +57,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/murals': typeof MuralsRoute
+  '/portraits': typeof PortraitsRoute
+  '/weddings': typeof WeddingsRoute
   '/works/$slug': typeof WorksSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/murals': typeof MuralsRoute
+  '/portraits': typeof PortraitsRoute
+  '/weddings': typeof WeddingsRoute
   '/works/$slug': typeof WorksSlugRoute
 }
 export interface FileRoutesById {
@@ -52,25 +76,74 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/murals': typeof MuralsRoute
+  '/portraits': typeof PortraitsRoute
+  '/weddings': typeof WeddingsRoute
   '/works/$slug': typeof WorksSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/works/$slug'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/murals'
+    | '/portraits'
+    | '/weddings'
+    | '/works/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/works/$slug'
-  id: '__root__' | '/' | '/about' | '/contact' | '/works/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/murals'
+    | '/portraits'
+    | '/weddings'
+    | '/works/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/murals'
+    | '/portraits'
+    | '/weddings'
+    | '/works/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  MuralsRoute: typeof MuralsRoute
+  PortraitsRoute: typeof PortraitsRoute
+  WeddingsRoute: typeof WeddingsRoute
   WorksSlugRoute: typeof WorksSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/weddings': {
+      id: '/weddings'
+      path: '/weddings'
+      fullPath: '/weddings'
+      preLoaderRoute: typeof WeddingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portraits': {
+      id: '/portraits'
+      path: '/portraits'
+      fullPath: '/portraits'
+      preLoaderRoute: typeof PortraitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/murals': {
+      id: '/murals'
+      path: '/murals'
+      fullPath: '/murals'
+      preLoaderRoute: typeof MuralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -106,8 +179,20 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  MuralsRoute: MuralsRoute,
+  PortraitsRoute: PortraitsRoute,
+  WeddingsRoute: WeddingsRoute,
   WorksSlugRoute: WorksSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
