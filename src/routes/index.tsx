@@ -31,15 +31,6 @@ function HomePage() {
             height={1080}
           />
         </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pt-40 md:pt-48 text-center text-white">
-          <div className="flex justify-center gap-4">
-            <Link to="/contact" aria-label="commission a piece!" className="btn-hero-cta group">
-              commission a piece!
-            </Link>
-          </div>
-
-        </div>
       </section>
 
       {/* Gallery */}
