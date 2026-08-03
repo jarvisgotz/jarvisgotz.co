@@ -15,13 +15,34 @@ export function Header() {
           >
             jarvisgötz.co
           </Link>
-          <nav className="flex items-center gap-12">
+          <nav className="flex items-center gap-10">
             <Link
               to="/"
               className="label-uppercase text-base text-foreground/60 hover:text-foreground transition-colors duration-300"
               activeProps={{ className: "label-uppercase text-base text-accent" }}
             >
               Gallery
+            </Link>
+            <Link
+              to="/portraits"
+              className="label-uppercase text-base font-semibold text-foreground/70 hover:text-foreground transition-colors duration-300"
+              activeProps={{ className: "label-uppercase text-base font-semibold text-accent" }}
+            >
+              Portraits
+            </Link>
+            <Link
+              to="/murals"
+              className="label-uppercase text-base font-semibold text-foreground/70 hover:text-foreground transition-colors duration-300"
+              activeProps={{ className: "label-uppercase text-base font-semibold text-accent" }}
+            >
+              Murals
+            </Link>
+            <Link
+              to="/weddings"
+              className="label-uppercase text-base font-semibold text-foreground/70 hover:text-foreground transition-colors duration-300"
+              activeProps={{ className: "label-uppercase text-base font-semibold text-accent" }}
+            >
+              Weddings
             </Link>
             <Link
               to="/about"
@@ -65,6 +86,27 @@ export function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Gallery
+          </Link>
+          <Link
+            to="/portraits"
+            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Portraits
+          </Link>
+          <Link
+            to="/murals"
+            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Murals
+          </Link>
+          <Link
+            to="/weddings"
+            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
+            onClick={() => setMenuOpen(false)}
+          >
+            Weddings
           </Link>
           <Link
             to="/about"
