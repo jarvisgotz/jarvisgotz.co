@@ -107,6 +107,7 @@ export function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Weddings
+          </Link>
           <Link
             to="/about"
             className="label-uppercase text-foreground/60 hover:text-foreground"
