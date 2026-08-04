@@ -21,7 +21,7 @@ export function Header() {
               className="label-uppercase text-base text-foreground/60 hover:text-foreground transition-colors duration-300"
               activeProps={{ className: "label-uppercase text-base text-accent" }}
             >
-              Gallery
+              Home
             </Link>
             <Link
               to="/portraits"
@@ -43,13 +43,6 @@ export function Header() {
               activeProps={{ className: "label-uppercase text-base font-semibold text-accent" }}
             >
               Weddings
-            </Link>
-            <Link
-              to="/about"
-              className="label-uppercase text-base text-foreground/60 hover:text-foreground transition-colors duration-300"
-              activeProps={{ className: "label-uppercase text-base text-accent" }}
-            >
-              About
             </Link>
             <Link
               to="/contact"
@@ -85,7 +78,7 @@ export function Header() {
             className="label-uppercase text-foreground/60 hover:text-foreground"
             onClick={() => setMenuOpen(false)}
           >
-            Gallery
+            Home
           </Link>
           <Link
             to="/portraits"
@@ -107,13 +100,6 @@ export function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Weddings
-          </Link>
-          <Link
-            to="/about"
-            className="label-uppercase text-foreground/60 hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
-          >
-            About
           </Link>
           <Link
             to="/contact"

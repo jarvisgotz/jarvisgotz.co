@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { galleryItems, heroImages } from "@/lib/gallery";
+import { heroImages } from "@/lib/gallery";
 import { Slideshow } from "@/components/Slideshow";
 
 
@@ -30,43 +30,6 @@ function HomePage() {
             width={1920}
             height={1080}
           />
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-20 md:py-32 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center gap-6 mb-16">
-            <p className="label-uppercase text-3xl">gallery</p>
-            <div className="divider-gold" />
-          </div>
-
-          <div className="columns-1 md:columns-2 gap-4 md:gap-6 space-y-4 md:space-y-6">
-            {galleryItems.map((item) => (
-              <Link
-                key={item.slug}
-                to="/works/$slug"
-                params={{ slug: item.slug }}
-                className="gallery-item break-inside-avoid block cursor-pointer"
-                aria-label={`view ${item.title} — ${item.location}`}
-              >
-                <Slideshow
-                  images={item.images}
-                  alt={`${item.title} — ${item.location}`}
-                  className="w-full"
-                  interval={item.aspect === "tall" ? 4500 : 5500}
-                  width={1024}
-                  height={item.aspect === "tall" ? 1344 : 768}
-                />
-
-                <div className="gallery-overlay" />
-                <div className="gallery-caption">
-                  <p className="font-serif text-3xl md:text-4xl text-foreground">{item.title}</p>
-                  <p className="label-uppercase mt-2 text-foreground/50 text-lg md:text-xl">{item.location}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
