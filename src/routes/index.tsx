@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { galleryItems, heroImages } from "@/lib/gallery";
+import { heroImages } from "@/lib/gallery";
 import { Slideshow } from "@/components/Slideshow";
 
 
