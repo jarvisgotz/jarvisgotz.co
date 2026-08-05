@@ -36,12 +36,9 @@ function HomePage() {
       {/* CTA */}
       <section className="py-20 md:py-32 px-6 md:px-12 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="heading-section text-foreground">
-            every space deserves a masterpiece
-          </h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl mx-auto">
-            i work with architects, interior designers, and private collectors to create
-            one-of-a-kind murals tailored to your vision and space.
+          <p className="font-bold text-foreground leading-relaxed max-w-xl mx-auto">
+            whether on a custom build canvas or directly onto your walls, we will
+            tailor your vision to your space.
           </p>
           <div className="mt-10">
             <Link to="/contact" className="btn-luxury-outline">
