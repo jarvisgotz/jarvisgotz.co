@@ -37,7 +37,7 @@ function HomePage() {
       <section className="py-20 md:py-32 px-6 md:px-12 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-foreground text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
-            whether on a custom build canvas or directly onto your walls, we will
+            whether on a custom-built canvas or directly onto your walls, we will
             tailor your vision to your space.
           </p>
           <div className="mt-10">
