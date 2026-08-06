@@ -19,8 +19,8 @@ export type GalleryItem = {
 export const heroImages: string[] = [
   "/hero-robin.jpg",
   "/hero-josh.jpg",
-  "/hero-dog.jpg",
   "/hero-pink.jpg",
+  "/hero-dog.jpg",
 ];
 
 export const galleryItems: GalleryItem[] = [
