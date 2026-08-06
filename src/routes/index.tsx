@@ -25,6 +25,7 @@ function HomePage() {
             images={heroImages}
             alt="Artist painting a large-scale mural in a dramatic studio"
             className="w-full h-full"
+            imageClassName="object-[50%_40%] md:object-center"
             interval={5000}
             loading="eager"
             width={1920}
