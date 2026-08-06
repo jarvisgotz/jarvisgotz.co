@@ -55,16 +55,16 @@ export function Header() {
         </div>
 
         {/* Mobile bar */}
-        <div className="md:hidden relative flex items-center justify-center h-16">
+        <div className="md:hidden relative flex items-center justify-center h-24">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="absolute left-0 flex flex-col gap-1.5 p-2"
+            className="absolute left-0 flex flex-col gap-2 p-2"
             aria-label="Toggle menu"
           >
-            <span className={`block w-5 h-px bg-foreground transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1' : ''}`} />
-            <span className={`block w-5 h-px bg-foreground transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-0.5' : ''}`} />
+            <span className={`block w-6 h-px bg-foreground transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1' : ''}`} />
+            <span className={`block w-6 h-px bg-foreground transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1' : ''}`} />
           </button>
-          <Link to="/" className="font-serif text-xl tracking-tight text-foreground">
+          <Link to="/" className="font-serif text-3xl tracking-tight text-foreground">
             jarvisgötz.co
           </Link>
         </div>
