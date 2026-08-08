@@ -58,39 +58,39 @@ export function Header() {
           <Link to="/" className="font-serif text-3xl tracking-tight text-foreground">
             jarvisgötz.co
           </Link>
-          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <nav className="flex items-center justify-center gap-x-3">
             <Link
               to="/"
-              className="label-uppercase text-sm text-foreground/60"
-              activeProps={{ className: "label-uppercase text-sm text-accent" }}
+              className="label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap text-foreground/60"
+              activeProps={{ className: "label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap text-accent" }}
             >
               Home
             </Link>
             <Link
               to="/portraits"
-              className="label-uppercase text-sm font-semibold text-foreground/70"
-              activeProps={{ className: "label-uppercase text-sm font-semibold text-accent" }}
+              className="label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap font-semibold text-foreground/70"
+              activeProps={{ className: "label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap font-semibold text-accent" }}
             >
               Portraits
             </Link>
             <Link
               to="/murals"
-              className="label-uppercase text-sm font-semibold text-foreground/70"
-              activeProps={{ className: "label-uppercase text-sm font-semibold text-accent" }}
+              className="label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap font-semibold text-foreground/70"
+              activeProps={{ className: "label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap font-semibold text-accent" }}
             >
               Murals
             </Link>
             <Link
               to="/weddings"
-              className="label-uppercase text-sm font-semibold text-foreground/70"
-              activeProps={{ className: "label-uppercase text-sm font-semibold text-accent" }}
+              className="label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap font-semibold text-foreground/70"
+              activeProps={{ className: "label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap font-semibold text-accent" }}
             >
               Weddings
             </Link>
             <Link
               to="/contact"
-              className="label-uppercase text-sm text-foreground/60"
-              activeProps={{ className: "label-uppercase text-sm text-accent" }}
+              className="label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap text-foreground/60"
+              activeProps={{ className: "label-uppercase text-[0.72rem] tracking-[0.12em] whitespace-nowrap text-accent" }}
             >
               Inquire
             </Link>
