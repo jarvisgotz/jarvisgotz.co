@@ -19,13 +19,14 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-[70vh] md:h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <Slideshow
             images={heroImages}
             alt="Artist painting a large-scale mural in a dramatic studio"
             className="w-full h-full"
-            imageClassName="object-[50%_40%] md:object-center"
+            imageClassName="object-contain object-[50%_60%] md:object-cover md:object-center"
+
             interval={5000}
             loading="eager"
             width={1920}
