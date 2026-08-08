@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
 
 export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md">
@@ -54,62 +53,51 @@ export function Header() {
           </nav>
         </div>
 
-        {/* Mobile bar */}
-        <div className="md:hidden relative flex items-center justify-center h-24">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="absolute left-0 flex flex-col gap-2 p-2"
-            aria-label="Toggle menu"
-          >
-            <span className={`block w-6 h-px bg-foreground transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1' : ''}`} />
-            <span className={`block w-6 h-px bg-foreground transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1' : ''}`} />
-          </button>
+        {/* Mobile masthead */}
+        <div className="md:hidden flex flex-col items-center pt-6 pb-5 gap-4">
           <Link to="/" className="font-serif text-3xl tracking-tight text-foreground">
             jarvisgötz.co
           </Link>
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Link
+              to="/"
+              className="label-uppercase text-sm text-foreground/60"
+              activeProps={{ className: "label-uppercase text-sm text-accent" }}
+            >
+              Home
+            </Link>
+            <Link
+              to="/portraits"
+              className="label-uppercase text-sm font-semibold text-foreground/70"
+              activeProps={{ className: "label-uppercase text-sm font-semibold text-accent" }}
+            >
+              Portraits
+            </Link>
+            <Link
+              to="/murals"
+              className="label-uppercase text-sm font-semibold text-foreground/70"
+              activeProps={{ className: "label-uppercase text-sm font-semibold text-accent" }}
+            >
+              Murals
+            </Link>
+            <Link
+              to="/weddings"
+              className="label-uppercase text-sm font-semibold text-foreground/70"
+              activeProps={{ className: "label-uppercase text-sm font-semibold text-accent" }}
+            >
+              Weddings
+            </Link>
+            <Link
+              to="/contact"
+              className="label-uppercase text-sm text-foreground/60"
+              activeProps={{ className: "label-uppercase text-sm text-accent" }}
+            >
+              Inquire
+            </Link>
+          </nav>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-background px-6 py-8 flex flex-col items-center gap-6">
-          <Link
-            to="/"
-            className="label-uppercase text-foreground/60 hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            to="/portraits"
-            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
-          >
-            Portraits
-          </Link>
-          <Link
-            to="/murals"
-            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
-          >
-            Murals
-          </Link>
-          <Link
-            to="/weddings"
-            className="label-uppercase font-semibold text-foreground/70 hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
-          >
-            Weddings
-          </Link>
-          <Link
-            to="/contact"
-            className="label-uppercase text-foreground/60 hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
-          >
-            Inquire
-          </Link>
-        </div>
-      )}
     </header>
   );
 }
